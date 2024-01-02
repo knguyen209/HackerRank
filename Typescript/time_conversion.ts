@@ -1,4 +1,4 @@
-function timeConversion(s) {
+function timeConversion(s: string): string {
     // Write your code here
     let indication = s.slice(-2)
     let timeStr = s.slice(0, s.length - 2)
@@ -17,9 +17,5 @@ function timeConversion(s) {
     answer += ':' + timeArr[1].toString().padStart(2, '0')
     answer += ':' + timeArr[2].toString().padStart(2, '0')
 
-    console.log(answer)
+    return answer
 }
-
-timeConversion('07:05:45PM')
-
-timeConversion('07:05:45AM')
