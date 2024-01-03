@@ -1,6 +1,5 @@
 function flippingMatrix(matrix) {
     let n = matrix.length / 2
-    let max = 0
     let total = 0
     for (let row = 0; row < n; row++) {
         for (let col = 0; col < n; col++) {

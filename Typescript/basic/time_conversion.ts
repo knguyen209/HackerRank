@@ -1,4 +1,4 @@
-function timeConversion(s: string): string {
+function timeConversionTS(s: string): string {
     // Write your code here
     let indication = s.slice(-2)
     let timeStr = s.slice(0, s.length - 2)
