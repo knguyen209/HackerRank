@@ -1,31 +1,29 @@
 // https://www.hackerrank.com/challenges/between-two-sets/problem
 
 function getTotalX(a, b) {
-    var c = a.concat(b);
-    c.sort((a, b) => a - b);
-    var max = c[c.length - 1];
+    var c = a.concat(b)
+    c.sort((a, b) => a - b)
+    var max = c[c.length - 1]
 
-    var arr = [];
-
-    var factorsInA = a.filter((n) => 5 % n == 0);
+    var arr = []
 
     for (let i = 1; i <= max; i++) {
-        var factorsInA = a.filter((n) => i % n == 0);
-        var factorsOfB = b.filter((n) => n % i == 0);
+        var factorsInA = a.filter((n) => i % n == 0)
+        var factorsOfB = b.filter((n) => n % i == 0)
 
         if (
             factorsInA.length == a.length &&
             factorsOfB.length == b.length &&
             !arr.includes(i)
         ) {
-            arr.push(i);
+            arr.push(i)
         }
     }
 
-    return arr.length;
+    return arr.length
 }
 
 var a = [1],
-    b = [72, 48];
+    b = [72, 48]
 
-console.log(getTotalX(a, b));
+console.log(getTotalX(a, b))
